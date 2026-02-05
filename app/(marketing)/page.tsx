@@ -60,18 +60,18 @@ const services = [
 ];
 
 const clients = [
-  "Khaadi",
-  "Nishat Linen",
-  "Borjan",
-  "KIA",
-  "Limelight",
-  "Outfitters",
-  "MTJ - Tariq Jamil",
-  "Junaid Jamshed",
-  "KFC",
-  "McDonald's",
-  "Nestlé",
-  "Imtiaz",
+  { name: "Khaadi", logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 40'%3E%3Ctext x='50' y='25' font-family='Georgia,serif' font-size='18' font-weight='bold' text-anchor='middle' fill='%234a5568'%3EKHAADI%3C/text%3E%3C/svg%3E" },
+  { name: "Nishat Linen", logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 40'%3E%3Ctext x='50' y='20' font-family='Arial' font-size='12' font-weight='bold' text-anchor='middle' fill='%232d3748'%3ENishat%3C/text%3E%3Ctext x='50' y='32' font-family='Arial' font-size='10' text-anchor='middle' fill='%234a5568'%3ELinen%3C/text%3E%3C/svg%3E" },
+  { name: "Borjan", logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 40'%3E%3Ctext x='50' y='25' font-family='Arial' font-size='20' font-weight='bold' text-anchor='middle' fill='%23000'%3EBORJAN%3C/text%3E%3C/svg%3E" },
+  { name: "KIA", logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 40'%3E%3Cellipse cx='50' cy='20' rx='30' ry='15' fill='none' stroke='%23bb162b' stroke-width='2'/%3E%3Ctext x='50' y='25' font-family='Arial' font-size='16' font-weight='bold' text-anchor='middle' fill='%23bb162b'%3EKIA%3C/text%3E%3C/svg%3E" },
+  { name: "Limelight", logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 40'%3E%3Ctext x='50' y='25' font-family='Arial' font-size='14' font-weight='bold' text-anchor='middle' fill='%2366cc66'%3ELIMELIGHT%3C/text%3E%3C/svg%3E" },
+  { name: "Outfitters", logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 40'%3E%3Ctext x='50' y='25' font-family='Arial' font-size='14' font-weight='bold' text-anchor='middle' fill='%23000'%3EOUTFITTERS%3C/text%3E%3C/svg%3E" },
+  { name: "MTJ - Tariq Jamil", logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 40'%3E%3Ctext x='50' y='22' font-family='Georgia,serif' font-size='18' font-weight='bold' text-anchor='middle' fill='%23228822'%3EMTJ%3C/text%3E%3Ctext x='50' y='35' font-family='Arial' font-size='8' text-anchor='middle' fill='%234a5568'%3ETariq Jamil%3C/text%3E%3C/svg%3E" },
+  { name: "Junaid Jamshed", logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 40'%3E%3Ctext x='50' y='22' font-family='Georgia,serif' font-size='16' font-weight='bold' text-anchor='middle' fill='%23000'%3EJ.%3C/text%3E%3Ctext x='50' y='34' font-family='Arial' font-size='10' text-anchor='middle' fill='%234a5568'%3EJunaid Jamshed%3C/text%3E%3C/svg%3E" },
+  { name: "KFC", logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 40'%3E%3Crect width='100' height='40' rx='5' fill='%23e4002b'/%3E%3Ctext x='50' y='28' font-family='Arial' font-size='20' font-weight='bold' text-anchor='middle' fill='white'%3EKFC%3C/text%3E%3C/svg%3E" },
+  { name: "McDonald's", logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 40'%3E%3Cpath d='M20,10 Q30,5 35,20 Q40,5 50,10' fill='none' stroke='%23FFC72C' stroke-width='8' stroke-linecap='round'/%3E%3Ctext x='50' y='35' font-family='Arial' font-size='10' font-weight='bold' text-anchor='middle' fill='%23DA291C'%3EMcDonald's%3C/text%3E%3C/svg%3E" },
+  { name: "Nestlé", logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 40'%3E%3Ctext x='50' y='25' font-family='Arial' font-size='18' font-weight='bold' text-anchor='middle' fill='%23000'%3ENestl%C3%A9%3C/text%3E%3C/svg%3E" },
+  { name: "Imtiaz", logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 40'%3E%3Crect width='100' height='40' rx='3' fill='%2300a651'/%3E%3Ctext x='50' y='27' font-family='Arial' font-size='18' font-weight='bold' text-anchor='middle' fill='white'%3EIMTIAZ%3C/text%3E%3C/svg%3E" },
 ];
 
 export default function HomePage() {
@@ -134,12 +134,12 @@ export default function HomePage() {
             <div className="flex justify-center lg:justify-end mt-8 lg:mt-0">
               <div className="relative group cursor-pointer" onClick={() => setShowCommando(true)}>
                 {/* Glowing Ring Animation */}
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-secondary via-yellow-300 to-secondary opacity-75 blur-xl sm:blur-2xl group-hover:opacity-100 transition-opacity duration-500 animate-pulse-slow" />
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-red-600 via-red-500 to-red-600 opacity-75 blur-xl sm:blur-2xl group-hover:opacity-100 transition-opacity duration-500 animate-pulse-slow" />
                 
                 {/* Avatar Container */}
                 <div className="relative">
                   {/* Rotating Border */}
-                  <div className="absolute -inset-2 sm:-inset-4 rounded-full bg-gradient-to-r from-secondary via-yellow-300 to-secondary opacity-75 blur-sm sm:blur-md group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 animate-spin-slow" />
+                  <div className="absolute -inset-2 sm:-inset-4 rounded-full bg-gradient-to-r from-red-600 via-red-500 to-red-600 opacity-75 blur-sm sm:blur-md group-hover:opacity-100 group-hover:blur-xl transition-all duration-500 animate-spin-slow" />
                   
                   {/* Main Avatar */}
                   <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 sm:border-6 md:border-8 border-white shadow-2xl transform group-hover:scale-105 transition-transform duration-500">
@@ -155,11 +155,11 @@ export default function HomePage() {
                   </div>
 
                   {/* Badges */}
-                  <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 bg-secondary text-primary px-2 py-0.5 sm:px-3 sm:py-1 rounded-full font-bold text-xs sm:text-sm shadow-lg animate-bounce-slow flex items-center gap-1">
+                  <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 bg-gradient-to-r from-red-600 to-red-700 text-white px-2 py-0.5 sm:px-3 sm:py-1 rounded-full font-bold text-xs sm:text-sm shadow-lg animate-bounce-slow flex items-center gap-1">
                     <Star className="w-3 h-3 sm:w-4 sm:h-4 fill-current" />
                     Expert
                   </div>
-                  <div className="absolute -bottom-1 -left-1 sm:-bottom-2 sm:-left-2 bg-white text-primary px-2 py-0.5 sm:px-3 sm:py-1 rounded-full font-bold text-xs sm:text-sm shadow-lg flex items-center gap-1">
+                  <div className="absolute -bottom-1 -left-1 sm:-bottom-2 sm:-left-2 bg-white text-red-700 border-2 border-red-600 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full font-bold text-xs sm:text-sm shadow-lg flex items-center gap-1">
                     <Medal className="w-3 h-3 sm:w-4 sm:h-4" />
                     Certified
                   </div>
@@ -198,8 +198,8 @@ export default function HomePage() {
 
             <DialogHeader className="relative p-4 sm:p-6 pb-3 sm:pb-4 border-b border-primary/10">
               <DialogTitle className="text-xl sm:text-2xl md:text-3xl font-bold text-primary flex items-center gap-2 sm:gap-3">
-                <div className="p-2 sm:p-2.5 rounded-xl bg-gradient-to-br from-secondary to-yellow-400 shadow-lg">
-                  <Medal className="w-5 h-5 sm:w-7 sm:h-7 text-primary flex-shrink-0" />
+                <div className="p-2 sm:p-2.5 rounded-xl bg-gradient-to-br from-red-600 to-red-700 shadow-lg">
+                  <Medal className="w-5 h-5 sm:w-7 sm:h-7 text-white flex-shrink-0" />
                 </div>
                 <span className="leading-tight bg-gradient-to-r from-primary to-primary-600 bg-clip-text text-transparent">Elite Security Commando</span>
               </DialogTitle>
@@ -210,23 +210,20 @@ export default function HomePage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                 {/* Commando Image */}
                 <div className="relative group">
-                  <div className="absolute -inset-1 sm:-inset-2 bg-gradient-to-r from-secondary via-yellow-300 to-secondary rounded-2xl opacity-75 group-hover:opacity-100 blur-sm transition-opacity" />
+                  <div className="absolute -inset-1 sm:-inset-2 bg-gradient-to-r from-red-600 via-red-500 to-red-600 rounded-2xl opacity-75 group-hover:opacity-100 blur-sm transition-opacity" />
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white">
-                    <div className="relative h-64 sm:h-80 md:h-96 lg:h-[500px] bg-white p-4">
-                      <div className="absolute inset-0 flex items-center justify-center p-6">
-                        <div className="relative w-full h-full">
-                          <Image
-                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='500' viewBox='0 0 400 500'%3E%3Crect width='400' height='500' fill='%23f8f9fa'/%3E%3Cg transform='translate(200,250)'%3E%3Ccircle r='80' fill='%23921a1d' opacity='0.1'/%3E%3Cpath d='M-30,-60 L-30,-20 L-40,-10 L-40,40 L-20,60 L20,60 L40,40 L40,-10 L30,-20 L30,-60 Z' fill='%23921a1d'/%3E%3Crect x='-35' y='-65' width='70' height='15' rx='3' fill='%23FFD700'/%3E%3Ctext x='0' y='100' text-anchor='middle' font-size='16' font-weight='bold' fill='%23921a1d' font-family='Arial'%3EELITE GUARD%3C/text%3E%3C/g%3E%3C/svg%3E"
-                            alt="Elite Security Commando"
-                            fill
-                            className="object-contain"
-                            priority
-                          />
-                        </div>
-                      </div>
+                    <div className="relative h-64 sm:h-80 md:h-96 lg:h-[500px] bg-white">
+                      <Image
+                        src="/commando.jpg"
+                        alt="Elite Security Commando - Professional Guard"
+                        fill
+                        className="object-cover object-center"
+                        priority
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
                     </div>
                   </div>
-                  <div className="absolute -top-2 -right-2 sm:top-2 sm:right-2 bg-gradient-to-r from-secondary to-yellow-400 text-primary px-3 py-1.5 sm:px-4 sm:py-2 rounded-full font-bold text-xs sm:text-sm shadow-2xl flex items-center gap-1.5 border-2 border-white">
+                  <div className="absolute -top-2 -right-2 sm:top-2 sm:right-2 bg-gradient-to-r from-red-600 to-red-700 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-full font-bold text-xs sm:text-sm shadow-2xl flex items-center gap-1.5 border-2 border-white">
                     <Star className="w-3 h-3 sm:w-4 sm:h-4 fill-current" />
                     Elite Grade
                   </div>
@@ -242,27 +239,27 @@ export default function HomePage() {
                   </div>
 
                   <div className="space-y-3 sm:space-y-4">
-                    <div className="flex items-start gap-2 sm:gap-3 p-3 sm:p-4 rounded-xl bg-gradient-to-br from-secondary/5 to-transparent hover:from-secondary/10 transition-all">
-                      <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-secondary to-yellow-400 flex items-center justify-center flex-shrink-0 shadow-md">
-                        <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                    <div className="flex items-start gap-2 sm:gap-3 p-3 sm:p-4 rounded-xl bg-gradient-to-br from-red-50 to-transparent hover:from-red-100 transition-all">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-red-600 to-red-700 flex items-center justify-center flex-shrink-0 shadow-md">
+                        <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                       </div>
                       <div>
                         <h4 className="font-bold text-primary text-sm sm:text-base mb-1">Professional Training</h4>
                         <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">Certified and extensively trained in security operations</p>
                       </div>
                     </div>
-                    <div className="flex items-start gap-2 sm:gap-3 p-3 sm:p-4 rounded-xl bg-gradient-to-br from-secondary/5 to-transparent hover:from-secondary/10 transition-all">
-                      <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-secondary to-yellow-400 flex items-center justify-center flex-shrink-0 shadow-md">
-                        <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                    <div className="flex items-start gap-2 sm:gap-3 p-3 sm:p-4 rounded-xl bg-gradient-to-br from-red-50 to-transparent hover:from-red-100 transition-all">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-red-600 to-red-700 flex items-center justify-center flex-shrink-0 shadow-md">
+                        <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                       </div>
                       <div>
                         <h4 className="font-bold text-primary text-sm sm:text-base mb-1">24/7 Protection</h4>
                         <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">Round-the-clock security services for complete peace of mind</p>
                       </div>
                     </div>
-                    <div className="flex items-start gap-2 sm:gap-3 p-3 sm:p-4 rounded-xl bg-gradient-to-br from-secondary/5 to-transparent hover:from-secondary/10 transition-all">
-                      <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-secondary to-yellow-400 flex items-center justify-center flex-shrink-0 shadow-md">
-                        <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                    <div className="flex items-start gap-2 sm:gap-3 p-3 sm:p-4 rounded-xl bg-gradient-to-br from-red-50 to-transparent hover:from-red-100 transition-all">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-red-600 to-red-700 flex items-center justify-center flex-shrink-0 shadow-md">
+                        <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                       </div>
                       <div>
                         <h4 className="font-bold text-primary text-sm sm:text-base mb-1">Battle-Tested Experience</h4>
@@ -333,13 +330,13 @@ export default function HomePage() {
             {services.map((service, index) => (
               <Card
                 key={service.title}
-                className="hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 sm:hover:-translate-y-2 group border-2 border-gray-200 hover:border-secondary/60 bg-gradient-to-br from-white to-gray-50 relative overflow-hidden"
+                className="hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 sm:hover:-translate-y-2 group border-2 border-gray-200 hover:border-red-500/60 bg-gradient-to-br from-white to-gray-50 relative overflow-hidden"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-secondary/0 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-br from-red-500/0 to-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                 <CardContent className="p-4 sm:p-6 relative">
-                  <div className="mb-3 sm:mb-4 inline-flex p-2 sm:p-3 rounded-xl bg-gradient-to-br from-accent/10 to-accent/5 group-hover:from-secondary/20 group-hover:to-yellow-400/20 transition-all shadow-sm group-hover:shadow-md">
-                    <CheckCircle2 className="h-6 w-6 sm:h-8 sm:w-8 text-accent group-hover:text-secondary transition-colors" />
+                  <div className="mb-3 sm:mb-4 inline-flex p-2 sm:p-3 rounded-xl bg-gradient-to-br from-accent/10 to-accent/5 group-hover:from-red-500/20 group-hover:to-red-600/20 transition-all shadow-sm group-hover:shadow-md">
+                    <CheckCircle2 className="h-6 w-6 sm:h-8 sm:w-8 text-accent group-hover:text-red-600 transition-colors" />
                   </div>
                   <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-gray-900 group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-primary-600 group-hover:bg-clip-text group-hover:text-transparent transition-all">
                     {service.title}
@@ -383,17 +380,21 @@ export default function HomePage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 md:gap-6">
             {clients.map((client, index) => (
               <div
-                key={client}
-                className="bg-gradient-to-br from-white to-gray-50 rounded-lg sm:rounded-xl p-4 sm:p-5 md:p-6 text-center shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 hover:border-secondary/50 group relative overflow-hidden"
+                key={client.name}
+                className="bg-gradient-to-br from-white to-gray-50 rounded-lg sm:rounded-xl p-4 sm:p-5 md:p-6 text-center shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-200 hover:border-red-500/50 group relative overflow-hidden"
                 style={{ animationDelay: `${index * 30}ms` }}
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-secondary/0 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-br from-red-500/0 to-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="relative flex items-center justify-center h-12 sm:h-14 mb-2">
-                  <div className="w-full h-full flex items-center justify-center">
-                    <Shield className="w-6 h-6 sm:w-8 sm:h-8 text-primary/20 group-hover:text-secondary/30 transition-colors" />
-                  </div>
+                  <Image
+                    src={client.logo}
+                    alt={`${client.name} logo`}
+                    width={100}
+                    height={40}
+                    className="max-h-full w-auto object-contain group-hover:scale-110 transition-transform"
+                  />
                 </div>
-                <span className="relative text-xs sm:text-sm md:text-base font-bold text-gray-800 group-hover:text-primary transition-colors">{client}</span>
+                <span className="relative text-xs sm:text-sm md:text-base font-bold text-gray-800 group-hover:text-red-700 transition-colors">{client.name}</span>
               </div>
             ))}
           </div>
