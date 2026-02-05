@@ -1,0 +1,182 @@
+import Link from "next/link";
+import { Shield, Phone, Mail, MapPin, Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+export function MarketingNavbar() {
+  return (
+    <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+      <div className="container flex h-16 items-center justify-between">
+        <Link href="/" className="flex items-center space-x-2">
+          <div className="relative h-10 w-10">
+            <Shield className="h-10 w-10 text-primary fill-secondary stroke-primary" />
+          </div>
+          <div className="flex flex-col">
+            <span className="text-lg font-bold text-primary leading-tight">
+              Sheriff Security
+            </span>
+            <span className="text-[10px] text-muted-foreground leading-tight">
+              The Name of Conservation
+            </span>
+          </div>
+        </Link>
+
+        <nav className="hidden md:flex items-center space-x-6">
+          <Link
+            href="/"
+            className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+          >
+            Home
+          </Link>
+          <Link
+            href="/services"
+            className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+          >
+            Services
+          </Link>
+          <Link
+            href="/projects"
+            className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+          >
+            Projects
+          </Link>
+          <Link
+            href="/branches"
+            className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+          >
+            Branches
+          </Link>
+          <Link
+            href="/contact"
+            className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+          >
+            Contact
+          </Link>
+        </nav>
+
+        <div className="flex items-center space-x-4">
+          <Link href="/login">
+            <Button variant="outline" className="hidden sm:flex">
+              Login
+            </Button>
+          </Link>
+          <a href="tel:03018689990">
+            <Button className="bg-primary hover:bg-primary-700">
+              <Phone className="mr-2 h-4 w-4" />
+              <span className="hidden sm:inline">Call Now</span>
+            </Button>
+          </a>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+export function MarketingFooter() {
+  return (
+    <footer className="bg-gray-900 text-gray-300">
+      <div className="container py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <Shield className="h-8 w-8 text-secondary fill-secondary/20" />
+              <div>
+                <h3 className="font-bold text-white">Sheriff Security</h3>
+                <p className="text-xs text-gray-400">Since 2004</p>
+              </div>
+            </div>
+            <p className="text-sm">
+              &quot;The Name of Conservation&quot; - Professional security services
+              trusted by leading brands across Pakistan.
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="font-semibold text-white mb-4">Quick Links</h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/" className="hover:text-secondary transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="hover:text-secondary transition-colors"
+                >
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/projects"
+                  className="hover:text-secondary transition-colors"
+                >
+                  Projects
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/branches"
+                  className="hover:text-secondary transition-colors"
+                >
+                  Branches
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="hover:text-secondary transition-colors"
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h4 className="font-semibold text-white mb-4">Our Services</h4>
+            <ul className="space-y-2 text-sm">
+              <li>Body Guards</li>
+              <li>Lady Checkers</li>
+              <li>Walk Through Gates</li>
+              <li>Metal Detectors</li>
+              <li>Bullet Proof Vests</li>
+              <li>Security Systems</li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="font-semibold text-white mb-4">Head Office</h4>
+            <ul className="space-y-3 text-sm">
+              <li className="flex items-start space-x-2">
+                <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0 text-secondary" />
+                <span>
+                  Mohalla Nawaban Main Street Jalwana Chock, Bahawalpur, 63100
+                </span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <Phone className="h-4 w-4 flex-shrink-0 text-secondary" />
+                <span>03018689990, 03336644631</span>
+              </li>
+              <li className="flex items-center space-x-2">
+                <Mail className="h-4 w-4 flex-shrink-0 text-secondary" />
+                <span>sheriffsgssc@gmail.com</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
+          <p>
+            &copy; {new Date().getFullYear()} Sheriff Security Company Pvt. Ltd.
+            All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}
