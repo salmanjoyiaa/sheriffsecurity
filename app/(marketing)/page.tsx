@@ -211,9 +211,8 @@ export default function HomePage() {
             <div className="relative p-4 pt-4 flex-1 overflow-y-auto sm:overflow-hidden">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 h-full">
                 {/* Commando Image */}
-                <div className="relative flex flex-col h-full">
-                  <div className="relative flex-1 rounded-2xl overflow-hidden shadow-xl bg-white border border-gray-100 group">
-                    <div className="absolute inset-0 bg-white" />
+                <div className="relative flex flex-col h-full min-h-[250px] md:min-h-0">
+                  <div className="relative h-64 md:h-auto md:flex-1 rounded-2xl overflow-hidden shadow-xl bg-white border border-gray-100 group">
                     <Image
                       src="/commando.jpg"
                       alt="Elite Security Commando - Professional Guard"
