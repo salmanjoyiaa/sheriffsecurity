@@ -3,7 +3,7 @@ export const COMPANY_INFO = {
   name: "Sheriff Security",
   tagline: "Professional Security Services",
   address: "Pakistan",
-  phone: "+92 XXX XXXXXXX",
+  phone: "+92 321 8636506",
   email: "info@sheriffsecurity.pk",
   website: "www.sheriffsecurity.pk",
 };
