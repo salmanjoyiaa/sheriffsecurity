@@ -187,96 +187,97 @@ export default function HomePage() {
 
       {/* Commando Modal */}
       <Dialog open={showCommando} onOpenChange={setShowCommando}>
-        <DialogContent className="max-w-[95vw] sm:max-w-[90vw] md:max-w-3xl lg:max-w-4xl p-0 overflow-hidden bg-gradient-to-br from-primary-50 to-white max-h-[90vh] overflow-y-auto">
-          <div className="relative">
+        <DialogContent className="max-w-[95vw] sm:max-w-[85vw] md:max-w-4xl p-0 overflow-hidden bg-white max-h-[85vh] flex flex-col">
+          <div className="relative flex-1 overflow-hidden flex flex-col">
             {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-5">
+            <div className="absolute inset-0 opacity-5 pointer-events-none">
               <div className="absolute inset-0" style={{
                 backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23228822' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
               }} />
             </div>
 
-            <DialogHeader className="relative p-4 sm:p-6 pb-3 sm:pb-4 border-b border-primary/10">
-              <DialogTitle className="text-xl sm:text-2xl md:text-3xl font-bold text-primary flex items-center gap-2 sm:gap-3">
-                <div className="p-2 sm:p-2.5 rounded-xl bg-gradient-to-br from-red-600 to-red-700 shadow-lg">
-                  <Medal className="w-5 h-5 sm:w-7 sm:h-7 text-white flex-shrink-0" />
+            <DialogHeader className="relative p-4 pb-2 border-b border-gray-100 flex-shrink-0">
+              <DialogTitle className="text-xl sm:text-2xl font-bold text-primary flex items-center gap-3">
+                <div className="p-2 rounded-xl bg-gradient-to-br from-red-600 to-red-700 shadow-lg">
+                  <Medal className="w-5 h-5 text-white flex-shrink-0" />
                 </div>
-                <span className="leading-tight bg-gradient-to-r from-primary to-primary-600 bg-clip-text text-transparent">Elite Security Commando</span>
+                <div>
+                  <span className="block leading-none bg-gradient-to-r from-primary to-primary-600 bg-clip-text text-transparent">Elite Security Commando</span>
+                  <span className="text-sm font-medium text-gray-500 mt-1 block">Professional, Trained, and Battle-Ready</span>
+                </div>
               </DialogTitle>
-              <p className="text-sm sm:text-base text-gray-600 mt-2 sm:mt-3 font-medium">Professional, Trained, and Battle-Ready</p>
             </DialogHeader>
 
-            <div className="relative p-4 sm:p-6 pt-2">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+            <div className="relative p-4 pt-4 flex-1 overflow-y-auto sm:overflow-hidden">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 h-full">
                 {/* Commando Image */}
-                <div className="relative group">
-                  <div className="absolute -inset-1 sm:-inset-2 bg-gradient-to-r from-red-600 via-red-500 to-red-600 rounded-2xl opacity-75 group-hover:opacity-100 blur-sm transition-opacity" />
-                  <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white">
-                    <div className="relative h-64 sm:h-80 md:h-96 lg:h-[500px] bg-white">
-                      <Image
-                        src="/commando.jpg"
-                        alt="Elite Security Commando - Professional Guard"
-                        fill
-                        className="object-cover object-center"
-                        priority
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                      />
-                    </div>
+                <div className="relative flex flex-col h-full">
+                  <div className="relative flex-1 rounded-2xl overflow-hidden shadow-xl bg-white border border-gray-100 group">
+                    <div className="absolute inset-0 bg-white" />
+                    <Image
+                      src="/commando.jpg"
+                      alt="Elite Security Commando - Professional Guard"
+                      fill
+                      className="object-cover object-top bg-white"
+                      priority
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
-                  <div className="absolute -top-2 -right-2 sm:top-2 sm:right-2 bg-gradient-to-r from-red-600 to-red-700 text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-full font-bold text-xs sm:text-sm shadow-2xl flex items-center gap-1.5 border-2 border-white">
-                    <Star className="w-3 h-3 sm:w-4 sm:h-4 fill-current" />
+                  <div className="absolute top-4 right-4 bg-gradient-to-r from-red-600 to-red-700 text-white px-3 py-1 rounded-full font-bold text-xs shadow-lg flex items-center gap-1 border border-white/20">
+                    <Star className="w-3 h-3 fill-current" />
                     Elite Grade
                   </div>
                 </div>
 
                 {/* Details */}
-                <div className="flex flex-col justify-center space-y-4 sm:space-y-6">
+                <div className="flex flex-col h-full justify-between gap-4">
                   <div>
-                    <h3 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-primary to-primary-600 bg-clip-text text-transparent mb-2 sm:mb-3">Our Elite Force</h3>
-                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed font-medium">
-                      Our commandos undergo rigorous training and certification programs to ensure the highest standards of security and protection. Each member is carefully selected and trained in advanced security protocols.
+                    <h3 className="text-lg font-bold text-primary mb-2 flex items-center gap-2">
+                      <Shield className="w-5 h-5 text-red-600" />
+                      Our Elite Force
+                    </h3>
+                    <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                      Our commandos undergo rigorous training and certification programs to ensure the highest standards of security. Each member is carefully selected and trained in advanced protocols.
                     </p>
+
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3 p-3 rounded-lg bg-red-50/50 border border-red-100 hover:border-red-200 transition-colors">
+                        <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center flex-shrink-0 shadow-sm border border-red-100">
+                          <CheckCircle2 className="w-4 h-4 text-red-600" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-gray-900 text-sm mb-0.5">Professional Training</h4>
+                          <p className="text-xs text-gray-500 leading-tight">Certified and extensively trained in security operations</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3 p-3 rounded-lg bg-red-50/50 border border-red-100 hover:border-red-200 transition-colors">
+                        <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center flex-shrink-0 shadow-sm border border-red-100">
+                          <CheckCircle2 className="w-4 h-4 text-red-600" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-gray-900 text-sm mb-0.5">24/7 Protection</h4>
+                          <p className="text-xs text-gray-500 leading-tight">Round-the-clock security services for complete peace of mind</p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3 p-3 rounded-lg bg-red-50/50 border border-red-100 hover:border-red-200 transition-colors">
+                        <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center flex-shrink-0 shadow-sm border border-red-100">
+                          <CheckCircle2 className="w-4 h-4 text-red-600" />
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-gray-900 text-sm mb-0.5">Battle-Tested Experience</h4>
+                          <p className="text-xs text-gray-500 leading-tight">Years of experience protecting high-profile clients and assets</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
-                  <div className="space-y-3 sm:space-y-4">
-                    <div className="flex items-start gap-2 sm:gap-3 p-3 sm:p-4 rounded-xl bg-gradient-to-br from-red-50 to-transparent hover:from-red-100 transition-all">
-                      <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-red-600 to-red-700 flex items-center justify-center flex-shrink-0 shadow-md">
-                        <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-primary text-sm sm:text-base mb-1">Professional Training</h4>
-                        <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">Certified and extensively trained in security operations</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-2 sm:gap-3 p-3 sm:p-4 rounded-xl bg-gradient-to-br from-red-50 to-transparent hover:from-red-100 transition-all">
-                      <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-red-600 to-red-700 flex items-center justify-center flex-shrink-0 shadow-md">
-                        <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-primary text-sm sm:text-base mb-1">24/7 Protection</h4>
-                        <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">Round-the-clock security services for complete peace of mind</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-2 sm:gap-3 p-3 sm:p-4 rounded-xl bg-gradient-to-br from-red-50 to-transparent hover:from-red-100 transition-all">
-                      <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-red-600 to-red-700 flex items-center justify-center flex-shrink-0 shadow-md">
-                        <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-primary text-sm sm:text-base mb-1">Battle-Tested Experience</h4>
-                        <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">Years of experience protecting high-profile clients and assets</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="pt-2 sm:pt-4">
-                    <Link href="/contact">
-                      <Button className="w-full bg-gradient-to-r from-red-700 to-red-800 hover:from-red-800 hover:to-red-900 text-white shadow-xl hover:shadow-2xl transition-all text-sm sm:text-base font-bold" size="lg">
-                        <Phone className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-                        <span className="hidden sm:inline">Request Elite Security Team</span>
-                        <span className="sm:hidden">Request Security Team</span>
-                      </Button>
-                    </Link>
-                  </div>
+                  <Link href="/contact" className="mt-auto">
+                    <Button className="w-full bg-red-700 hover:bg-red-800 text-white shadow-lg hover:shadow-xl transition-all h-12 font-bold" size="lg">
+                      <Phone className="mr-2 h-4 w-4" />
+                      Request Elite Security Team
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
